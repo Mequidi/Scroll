@@ -87,6 +87,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    /* height: auto !important; */
 }
 .link-item{
     color: white;
@@ -140,6 +141,8 @@ body{
     font-family: var(--secondary-font);
     text-align: center;
     text-transform: capitalize;
+}
+#about,#tours{
     background: #f1f5f8;
 }
 #tours h1{
