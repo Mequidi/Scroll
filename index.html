@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header class="home">
+    <header id="home">
         <!-- navbar -->
         <nav class="nav">
             <!-- flex -->
@@ -23,10 +23,10 @@
                 <!-- flex -->
                 <div class="link-container">
                     <ul class="links">
-                        <li><a href="#"class="link-item">home</a></li>
-                        <li><a href="#" class="link-item">about</a></li>
-                        <li><a href="#" class="link-item">services</a></li>
-                        <li><a href="#" class="link-item">tours</a></li>
+                        <li><a href="#home"class="link-item">home</a></li>
+                        <li><a href="#about" class="link-item">about</a></li>
+                        <li><a href="#services" class="link-item">services</a></li>
+                        <li><a href="#tours" class="link-item">tours</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,37 +38,40 @@
                 <h1 class="banner-title">scroll project
                 </h1>
                 <p class="banner-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa pariatur tempora velit eos iste aspernatur delectus natus similique unde rem.</p>
-                <button class="btn tour-btn">
-                    <a class="link-item">explore tours</a>
-                </button>
+                
+                <a class="link-item tour-btn" href="#tours">explore tours</a>
+                
             </div>
         </div>
     </header>
     <!-- about us -->
     <section class="section">
-        <div class="about">
+        <div id="about">
             <h1>About <span> us</span></h1>
         </div>
     </section>
     <!-- services -->
     <section class="section">
-        <div class="about">
+        <div id="services">
             <h1>our<span> services</span></h1>
         </div>
     </section>
     <!-- tours -->
     <section class="section">
-        <div class="about">
+        <div id="tours">
             <h1>featured<span> tours</span></h1>
         </div>
     </section>
 
     <footer>
-        <p>copyright &copy; backroads travel tours company<span id="date"></span>. all rights reserved</p>
+        <p>copyright &copy; backroads travel tours company <span id="date"></span>. all rights reserved</p>
     </footer>
 
-    <button>
-        <a></a>
+    <button class="top-btn"> 
+        <i class="fas fa-arrow-up">
+            <a href="#home">
+                <i class="fas fa-arrow-up"></i></i>
+            </a>
     </button>
 
     <script src="/main.js"></script>
