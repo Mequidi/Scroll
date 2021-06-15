@@ -9,9 +9,10 @@ const allLinks = document.querySelectorAll(".link-item");
 const topBtn = document.querySelector(".top-btn");
 let containerHeight = 0;
 let isShowLinksActive = false;
+var isFirstClick = true;
 
 toggleBtn.addEventListener("click",function(){
-    // links.classList.toggle("show-links");
+    links.classList.toggle("show-links");
     allLinks.forEach(function(item){
         containerHeight += item.getBoundingClientRect().height;
     })
@@ -45,10 +46,6 @@ window.addEventListener("scroll",function(){
         topBtn.classList.remove("show-links");
 })  
 
-// if(window.screen.width >800)
-// {
-//     links.style.height=`${containerHeight}`
-// }
 const linkContainer = document.querySelector(".link-container");
 allLinks.forEach(function(item){
     item.addEventListener("click",function(e){
@@ -58,26 +55,30 @@ allLinks.forEach(function(item){
         const navHeight = nav.getBoundingClientRect().height;
         const linkContainerHeight = links.getBoundingClientRect().height;
         const fixedNav = nav.classList.contains("fixed-nav");
-        console.log(fixedNav)
         let position= element.offsetTop-navHeight;
-        console.log(navHeight)
+        
         if(!fixedNav)
         {
-            console.log("entered if");
-            position = position - navHeight;
+            console.log("if statement entered");
+            position = position - navHeight;  
         }
         //shits going sideways now ,why the fuck is this if statement not running
-        else if(links.classList.contains("show-links"))
+        // else if(links.classList.contains("show-links"))
+        else if(navHeight>80)
         {
             console.log("else if loop entered");
             position = position + linkContainerHeight;
         }
+        
         window.scrollTo({
             left:0,
             top:position
         })
-        links.style.height = 0;
-
+        links.style.height = `0px`;
+        // links.classList.remove("show-links");
+        containerHeight = 0;
+        isFirstClick = false;
+        
     })
 })
 
