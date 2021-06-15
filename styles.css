@@ -10,7 +10,7 @@
     --grey:#617d98;
     --spacing:4px;
     --radius:8px;
-    --transtion:all 0.5s linear;
+    --transtion:all 0.3s linear;
     --light-shadow:0 5px 15px rgba(0,0,0,0.1);
     --dark-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
@@ -115,6 +115,13 @@ body{
 .banner-text{
     margin-bottom: 20px;
     max-width: 40rem;
+}
+section P{
+    max-width: 20rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 5rem;
+    color: inherit;
 }
 .tour-btn{
     background-color: transparent;
