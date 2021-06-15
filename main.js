@@ -62,9 +62,7 @@ allLinks.forEach(function(item){
             console.log("if statement entered");
             position = position - navHeight;  
         }
-        //shits going sideways now ,why the fuck is this if statement not running
-        // else if(links.classList.contains("show-links"))
-        else if(navHeight>80)
+        if(links.getBoundingClientRect().height>80)
         {
             console.log("else if loop entered");
             position = position + linkContainerHeight;
@@ -75,7 +73,6 @@ allLinks.forEach(function(item){
             top:position
         })
         links.style.height = `0px`;
-        // links.classList.remove("show-links");
         containerHeight = 0;
         isFirstClick = false;
         
